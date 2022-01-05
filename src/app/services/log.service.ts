@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
-import {Log} from '../models/Log';
+import { Log } from '../models/Log';
 
 @Injectable()
 export class LogService {
   logs: Log[];
 
-  constructor() { 
+  constructor() {
     this.logs = [
       {
         id: '1',
@@ -21,5 +24,4 @@ export class LogService {
   getLogs() {
     return this.logs;
   }
-
 }

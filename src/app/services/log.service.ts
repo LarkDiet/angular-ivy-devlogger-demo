@@ -9,6 +9,9 @@ import { Log } from '../models/Log';
 export class LogService {
   logs: Log[];
 
+  private logSource = new BehaviorSubject<Log>({id: null, text: null, date: null});
+  selectedLog = this.logSource.asObservable();
+
   constructor() {
     this.logs = [
       {
@@ -23,5 +26,9 @@ export class LogService {
 
   getLogs() {
     return this.logs;
+  }
+
+  setFormLog(log: Log) {
+    this.logSource.next(log);
   }
 }

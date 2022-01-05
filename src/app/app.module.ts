@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LogFormComponent } from './log-form/log-form.component';
 import { LogsComponent } from './logs/logs.component';
 
-import {LogService} from './log.service';
+import {LogService} from './services/log.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],

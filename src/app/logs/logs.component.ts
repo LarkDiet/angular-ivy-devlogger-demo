@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Log} from '../models/Log';
+
 @Component({
   selector: 'app-logs',
   templateUrl: './logs.component.html',

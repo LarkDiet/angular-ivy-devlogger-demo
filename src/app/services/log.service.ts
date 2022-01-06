@@ -31,4 +31,8 @@ export class LogService {
   setFormLog(log: Log) {
     this.logSource.next(log);
   }
+
+  addLog(log: Log) {
+    this.logs.unshift(log);
+  }
 }

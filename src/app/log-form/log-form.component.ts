@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {v4} from 'uuid';
 
 import {LogService} from '../services/log.service';
 

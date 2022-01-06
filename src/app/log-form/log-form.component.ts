@@ -39,12 +39,12 @@ export class LogFormComponent implements OnInit {
       }
       this.logService.addLog(newLog);
     } else {
-      const udpLog = {
+      const updLog = {
         id: this.id,
         text: this.text,
         date: new Date()
       }
-      //this.logService.updateLog(updLog);
+      this.logService.updateLog(updLog);
     }
   }
 

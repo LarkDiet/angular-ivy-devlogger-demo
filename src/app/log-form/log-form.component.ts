@@ -26,4 +26,8 @@ export class LogFormComponent implements OnInit {
     })
   }
 
+  onSubmit() {
+    console.log('moo');
+  }
+
 }

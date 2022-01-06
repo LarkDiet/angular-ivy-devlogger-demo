@@ -31,7 +31,9 @@ export class LogFormComponent implements OnInit {
 
   onSubmit() {
     if(this.isNew){
-
+      const newLog = {
+        id: 2,
+      }
     } else {
       
     }

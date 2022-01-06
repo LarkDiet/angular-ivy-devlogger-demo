@@ -24,8 +24,8 @@ export class LogService {
     ];
   }
 
-  getLogs() {
-    return this.logs;
+  getLogs(): Observable<Log[]> {
+    return of(this.logs);
   }
 
   setFormLog(log: Log) {

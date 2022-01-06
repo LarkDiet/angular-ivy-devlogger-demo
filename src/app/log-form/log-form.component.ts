@@ -34,9 +34,17 @@ export class LogFormComponent implements OnInit {
     if(this.isNew){
       const newLog = {
         id: uuid(),
+        text: this.text,
+        date: new Date()
       }
+      this.logService.addLog(newLog);
     } else {
-      
+      const udpLog = {
+        id: this.id,
+        text: this.text,
+        date: new Date()
+      }
+      //this.logService.updateLog(updLog);
     }
   }
 

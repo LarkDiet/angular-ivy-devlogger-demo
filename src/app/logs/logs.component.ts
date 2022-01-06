@@ -11,10 +11,21 @@ import { Log } from '../models/Log';
 })
 export class LogsComponent implements OnInit {
   logs: Log[];
+  selectedLog: Log;
+  loaded: boolean = false;
 
   constructor(private logService: LogService) {}
 
   ngOnInit() {
+    this.logService.stateClear.subscribe(clear => {
+      if(clear) {
+        this.selectedLog = {
+          id: '',
+          text: '',
+          date: ''
+        }
+      }
+    })
     this.logService.getLogs().subscribe(logs => {
       this.logs = logs;
     });
@@ -22,6 +33,7 @@ export class LogsComponent implements OnInit {
 
   onSelect(log: Log) {
     this.logService.setFormLog(log);
+    this.selectedLog = log;
   }
 
   onDelete(log: Log) {

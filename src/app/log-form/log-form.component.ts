@@ -30,7 +30,11 @@ export class LogFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('moo');
+    if(this.isNew){
+
+    } else {
+      
+    }
   }
 
 }

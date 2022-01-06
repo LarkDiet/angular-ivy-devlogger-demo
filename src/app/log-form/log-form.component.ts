@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {v4} from 'uuid';
+import {v4 as uuid} from 'uuid';
 
 import {LogService} from '../services/log.service';
 
@@ -33,7 +33,7 @@ export class LogFormComponent implements OnInit {
   onSubmit() {
     if(this.isNew){
       const newLog = {
-        id: 2,
+        id: uuid(),
       }
     } else {
       

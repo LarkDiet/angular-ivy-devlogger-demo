@@ -16,7 +16,7 @@ export class LogService {
   stateClear = this.stateSource.asObservable();
 
   constructor() {
-    this.logs = [
+    /*this.logs = [
       {
         id: '1',
         text: 'Generated content',
@@ -24,7 +24,9 @@ export class LogService {
       },
       { id: '2', text: 'Beefed it', date: new Date('01/05/2022 17:55:00') },
       { id: '3', text: 'Unbeefed it', date: new Date('01/05/2022 18:00:00') },
-    ];
+    ]; */
+
+    this.logs = [];
   }
 
   getLogs(): Observable<Log[]> {
